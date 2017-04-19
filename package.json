@@ -1,0 +1,23 @@
+{
+  "name": "lazy",
+  "version": "1.0.0",
+  "description": "This app will user jquery's ajax to load some of the views in the page and some views will be loaded with the help of angular 1.4.8 and we will lazy load respective modules of the angular views",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyam0507/lazyLoadingAngular.git"
+  },
+  "author": "satyam singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyam0507/lazyLoadingAngular/issues"
+  },
+  "homepage": "https://github.com/satyam0507/lazyLoadingAngular#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
