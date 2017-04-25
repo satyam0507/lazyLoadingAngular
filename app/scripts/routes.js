@@ -1,5 +1,4 @@
-define([], function()
-{
+define([], function () {
     return {
         routes: {
             '/home': {
@@ -7,21 +6,18 @@ define([], function()
                 dependencies: [
                     'controllers/homeController'
                 ]
-                
             },
             '/about': {
                 templateUrl: '/views/about.php',
-                 dependencies: [
+                dependencies: [
                     'controllers/aboutController'
                 ]
-               
             },
             '/contact': {
                 templateUrl: '/views/contact.html',
                 dependencies: [
                     'controllers/contactController'
                 ]
-                
             }
         }
     };

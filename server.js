@@ -7,13 +7,9 @@ app.use('/scripts', express.static(__dirname + '/app/scripts' ));
 app.use('/views', express.static(__dirname + '/app/views' ));
 
 
-app.get('/', function(req,res)
+app.get('/*', function(req,res)
 {
     res.sendfile(__dirname + '/app/index.html');
-});
-
-app.get('/work',function(req,res){
-    res.sendfile(__dirname + '/views/work.html');
 });
 
 app.listen(4000,function(){

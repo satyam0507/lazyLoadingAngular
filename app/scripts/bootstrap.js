@@ -1,15 +1,14 @@
 'use strict';
 
 require.config({
-    baseUrl: '/scripts',
-    paths: {
+	baseUrl: '/scripts',
+	paths: {
 		'angular': '/bower_components/angular/angular',
 		'angular-route': '/bower_components/angular-route/angular-route',
+		'tether': "/scripts/lib/js/tether.min",
 		'bootstrapJs': '/scripts/lib/js/bootstrap.min',
-		'jquery': '/bower_components/jquery/dist/jquery',
-        // 'tether':"/scripts/lib/js/tether.min",
-		"web":"/scripts/web/main"
-    },
+		'jquery': '/bower_components/jquery/dist/jquery'
+	},
 	shim: {
 		'app': {
 			deps: ['angular', 'angular-route', 'bootstrapJs']
@@ -18,22 +17,22 @@ require.config({
 			deps: ['angular']
 		},
 		'bootstrapJs': {
-			deps: ['jquery']
+			deps: ['jquery', 'tether']
 		},
-		'web':{
-			deps:['jquery']
-		}
-
+		
 	}
 });
 
+require(['tether'],function(tether){
+	window.Tether = tether;
+});
+
 require
-(
-    [
-        'app','bootstrapJs','web'
-    ],
-    function(app)
-    {
-        angular.bootstrap(document, ['app']);
-    }
-);
+	(
+		[
+			'app'
+		],
+		function (app) {
+			angular.bootstrap(document, ['app']);
+		}
+	);
